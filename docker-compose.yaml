@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    container_name: origin
+    build: .
+    ports:
+      - "8080:8080"
+  redis:
+    container_name: redis_origin
+    hostname: redis
+    image: redis
+    ports:
+      - "6379:6379"
