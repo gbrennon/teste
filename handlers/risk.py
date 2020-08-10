@@ -1,13 +1,14 @@
-from flask_restful import Resource
+import hashlib
+import json
+
 from flask import request, jsonify
-from schemas.validator import validate_schema
-from schemas.schema import InputModel
+from flask_restful import Resource
 from handlers.risk_score_processor.auto import AutoRisk
 from handlers.risk_score_processor.disability import DisabilityRisk
 from handlers.risk_score_processor.home import HomeRisk
 from handlers.risk_score_processor.life import LifeRisk
-import hashlib
-import json
+from schemas.schema import InputModel
+from schemas.validator import validate_schema
 from utils.redis_client import Cache
 
 
