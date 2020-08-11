@@ -10,6 +10,7 @@ from handlers.risk_score_processor.life import LifeRisk
 from schemas.schema import InputModel
 from schemas.validator import validate_schema
 from utils.redis_client import Cache
+from utils.events import send_events
 
 
 class RiskHandler(Resource):
@@ -35,5 +36,7 @@ class RiskHandler(Resource):
         }
 
         cache_client.set(name=hash_data, value=response, ex=5*60)
+
+        send_events(response)
 
         return jsonify(response)

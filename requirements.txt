@@ -6,3 +6,4 @@ gunicorn
 schematics
 redis
 python-decouple
+boto3
