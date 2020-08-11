@@ -7,7 +7,7 @@ Microservice that evaluate risk score based on personal information provided.
 ### Architecture Proposal
 
 <p align="center">
-  <img src="https://github.com/maiaPhilippe/teste/blob/master/risk_score.png" />
+  <img src="https://github.com/maiaPhilippe/teste/blob/master/readme_images/risk_score.png" />
 </p>
 
 The proposed architecture assume that the application will be deployed on AWS cloud basis, however, there are several similar cloud tools available on market.
